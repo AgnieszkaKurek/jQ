@@ -7,7 +7,7 @@
    <script type=""text/javascript" src="jquery.js" ></script>
 </head>
 <body>
-  <h1>Manipulating the DOM</h1>
+ <h1>Where In the DOM is Carmen Spandiego?</h1>
    <p>One awesome benefit of jQuery is being able to change the DOM.  There are several types of ways we can manipulate the DOM with jQuery:</p>
   <ul>
     <li class="inside"><span>Inside</span></li>
@@ -16,10 +16,8 @@
     <li class="removal"><span>Removal</span></li>
     <li class="replacement"><span>Replacement</span></li>
   </ul>
-  
-  <div class="box">
-  </div>
-  
+
+  <p><span class="spandiego">Where am I?</span></p>
   <table>
    <caption>DOM Methods Reference</caption>
     <tr>
@@ -34,7 +32,7 @@
     </tr> 
     <tr class="inside">
       <td>.html()</td>
-      <td>If used without an argument, .html() returns an element's HTML. It also accepts a string value to to replace an element's HTML, or a function.  </td>
+      <td>If used without an argument, .text() returns an element's HTML. It also accepts a string value to to replace an element's HTML, or a function.  </td>
       <td><a href="http://api.jquery.com/html/">.html()</a></td>
     </tr>
     <tr class="inside">
@@ -88,12 +86,15 @@
       <td><a href="http://api.jquery.com/replaceWith/">.replaceAll()</a></td>
     </tr>
   </table>
- 
+  
+
   
  
 <script>
     $(document).ready( function () {
-      $("h1:first").text("Using the text Method") ;
+     var spandiego = $(".spandiego");
+     $("ul").append(spandiego);
+     spandiego.parent().css("border", "1px solid #cc3333");
 });
 </script>
 

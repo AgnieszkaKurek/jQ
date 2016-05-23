@@ -16,6 +16,16 @@ h1 {
   margin-top: 40px;
 }
 
+.spandiego {
+  color: yellow;
+  outline: 1px solid white;
+}
+
+.wrap {
+  background-color: #445c36;
+  padding: 30px;
+  margin: 5px;
+}
 /*------------ Table styles ---------*/
 
 table {

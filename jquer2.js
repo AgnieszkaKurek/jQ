@@ -1,1 +1,3 @@
- $("h1:first").text("Using the text Method") ;
+var spandiego = $(".spandiego");
+$("ul").append(spandiego);
+spandiego.parent().css("border", "1px solid #cc3333");
