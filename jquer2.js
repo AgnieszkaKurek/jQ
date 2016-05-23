@@ -1,1 +1,1 @@
-$("tr").css("color", "#993333");
+alert( $("p:first").text() );

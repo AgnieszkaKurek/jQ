@@ -9,22 +9,18 @@ h1 {
   margin-bottom: 30px;
 }
 
-em {
-  color: #ff7600;
-}
-
 .box {
   width: 200px;
   height: 200px;
   background-color: #83ac69;
-  margin-bottom: 20px;
+  margin-top: 40px;
 }
+
 /*------------ Table styles ---------*/
 
 table {
   max-width: 600px;
-  margin-top: 100px;
-  clear: both;
+  margin-top: 60px;
 }
 
   table a {
@@ -48,3 +44,23 @@ td {
   padding: 10px;
   background-color: #242424;
 }
+
+/*------------ Color Guides ---------*/
+
+.inside td:first-of-type, .inside span {
+  color: #ff8000;
+}
+.outside td:first-of-type, .outside span {
+  color: #83ac69;
+}
+.around td:first-of-type, .around span {
+  color: #de84ff;
+}
+.removal td:first-of-type, .removal span {
+  color: #e32299;
+}
+.replacement td:first-of-type, .replacement span {
+  color: #36a39b;
+}
+
+
