@@ -1,0 +1,17 @@
+body {
+  background-color: #191919;
+  color: white;
+  padding: 60px;
+  height: 2000px;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #83ac69;
+}

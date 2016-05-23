@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html lang="en"> 
+<head>
+   <meta charset="UTF-8"> 
+   <title>Intro to jQuery</title>
+   <link rel="stylesheet" href="main.css" type="text/css" >
+   <script type=""text/javascript" src="jquery.js" ></script>
+</head>
+<body>
+    <h1>Introduction to jQuery</h1>
+    <div class="box">
+        
+    </div>
+    <script>
+        $(document).ready(function () {
+    "use strict";
+    $(".box").click(function () {
+        $(this).fadeOut();
+    });
+}); //close the onready function
+        
+    </script>
+    
+</body>
+</html>
