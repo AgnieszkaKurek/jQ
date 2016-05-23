@@ -1,1 +1,1 @@
-alert( $("p:first").text() );
+ $("h1:first").text("Using the text Method") ;
