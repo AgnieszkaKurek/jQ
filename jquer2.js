@@ -1,6 +1,1 @@
-$(document).ready(function () {
-    "use strict";
-    $(".box").click(function () {
-        $(this).fadeOut();
-    });
-});
+$("tr").css("color", "#993333");
