@@ -47,23 +47,14 @@ td {
 
 /*------------ Color Guides ---------*/
 
-.traversal td:first-of-type, .traversal span {
+.basic td:first-of-type, .basic span {
   color: #ff8000;
 }
-.misc td:first-of-type, .misc span {
+.fade td:first-of-type, .fade span {
   color: #83ac69;
 }
-.filtering td:first-of-type, .filtering span {
+.slide td:first-of-type, .slide span {
   color: #de84ff;
-}
-.numbers {
-  margin: 40px 0 0 0;
-  background-color: #262525;
-  padding: 15px;
-}
-.numbers li {
-  margin: 10px 0 0 0;
-  list-style: none;
 }
 
 

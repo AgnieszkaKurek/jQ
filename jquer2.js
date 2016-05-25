@@ -1,1 +1,0 @@
-$(".numbers").children().css("color", "#660033");
