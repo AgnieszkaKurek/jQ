@@ -14,6 +14,7 @@ h1 {
   height: 200px;
   background-color: #83ac69;
   margin-top: 40px;
+  position: relative;
 }
 
 /*------------ Table styles ---------*/
@@ -47,15 +48,8 @@ td {
 
 /*------------ Color Guides ---------*/
 
-.basic td:first-of-type, .basic span {
+.custom td:first-of-type, .custom span {
   color: #ff8000;
 }
-.fade td:first-of-type, .fade span {
-  color: #83ac69;
-}
-.slide td:first-of-type, .slide span {
-  color: #de84ff;
-}
-
 
 

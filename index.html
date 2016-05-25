@@ -7,7 +7,7 @@
    <script type=""text/javascript" src="jquery.js" ></script>
 </head>
 <body>
- <h1>Effects</h1>
+<h1>Effects</h1>
    <p>JQuery includes a set effects with standard animations like hide, fade, and slide. It also simplifies the creation of custom animation as well. </p>
   
   
@@ -21,65 +21,31 @@
       <th>Description</th>
       <th>Documentation</th>
     </tr>
-    <tr class="basic">
-      <td>.hide()</td>
-      <td>Hides the set of selected elements. Similar to setting the element's display property to none.</td>
-      <td><a href="http://api.jquery.com/hide/">.hide()</a></td>
-    </tr>
-    <tr class="basic">
-      <td>.show()</td>
-      <td>Shows the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/show/">.show()</a></td>
-    </tr>
-    <tr class="basic">
-      <td>.toggle()</td>
-      <td>Toggles the set of selected elements to be displayed or hidden.</td>
-      <td><a href="http://api.jquery.com/toggle/">.toggle()</a></td>
-    </tr>
-    <tr class="fade">
-      <td>.fadeIn()</td>
-      <td>Fades in the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/fadeIn/">.fadeIn()</a></td>
-    </tr> 
-    <tr class="fade">
-      <td>.fadeOut()</td>
-      <td>Fades out the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/fadeOut/">.fadeOut()</a></td>
-    </tr> 
-    <tr class="fade">
-      <td>.fadeToggle()</td>
-      <td>Toggles the set of selected elements to fade in or out.</td>
-      <td><a href="http://api.jquery.com/fadeOut/">.fadeOut()</a></td>
-    </tr> 
-    <tr class="fade">
-      <td>.fadeTo()</td>
-      <td>Fades the set of selecting elements to the specified opacity. Requires a specific duration.</td>
-      <td><a href="http://api.jquery.com/fadeTo/">.fadeTo()</a></td>
-    </tr> 
-    <tr class="slide">
-      <td>.slideUp()</td>
-      <td>Applies a sliding motion to the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/slideUp/">.slideDown()</a></td>
-    </tr>
-     <tr class="slide">
-      <td>.slideDown()</td>
-      <td>Applies a sliding motion to the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/slideDown/">.slideUp()</a></td>
-    </tr> 
-     <tr class="slide">
-      <td>.slideToggle()</td>
-      <td>Applies a sliding motion to show or hide the set of selected elements.</td>
-      <td><a href="http://api.jquery.com/slideToggle/">.slideToggle()</a></td>
+    <tr class="custom">
+      <td>.animate()</td>
+      <td>Animates the specified set of CSS properties, plus any additional options arguments.  Property values should be a number in order for animate() to work.</td>
+      <td><a href="http://api.jquery.com/animate/">.animate()</a></td>
     </tr>  
-
   </table>
+  
+
 
 
   
  
 <script>
 $(document).ready( function() {
-  $(".box").fadeTo(1000, 0.3); 
+ $(".box").animate(
+  {
+      padding:50
+  },
+  "slow"
+  ,
+  "linear",
+  function() {
+      alert("done!");
+  }
+);
   
   
 });
