@@ -7,94 +7,110 @@
    <script type=""text/javascript" src="jquery.js" ></script>
 </head>
 <body>
- <h1>Where In the DOM is Carmen Spandiego?</h1>
-   <p>One awesome benefit of jQuery is being able to change the DOM.  There are several types of ways we can manipulate the DOM with jQuery:</p>
+ <h1>DOM Traversal</h1>
+  <p>Another way we can use jQuery with the DOM is through DOM traversal, or moving through the DOM.  We have several different categories of traversal methods:</p>
   <ul>
-    <li class="inside"><span>Inside</span></li>
-    <li class="outside"><span>Outside</span></li>
-    <li class="around"><span>Around</span></li>
-    <li class="removal"><span>Removal</span></li>
-    <li class="replacement"><span>Replacement</span></li>
+     <li class="traversal"><span>Traversal</span></li>
+     <li class="filtering"><span>Filtering</span></li>
+     <li class="misc"><span>Miscellaneous</span></li>
   </ul>
-
-  <p><span class="spandiego">Where am I?</span></p>
+  
+  <div class="numbers">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <p>Paragraph.</p>
+  </div>
+  
   <table>
-   <caption>DOM Methods Reference</caption>
+   <caption>Traversal Methods Reference</caption>
     <tr>
       <th>Method</th>
       <th>Description</th>
       <th>Documentation</th>
     </tr>
-    <tr class="inside">
-      <td>.text()</td>
-      <td>If used without an argument, .text() returns an element's text without the HTML tag. It also accepts a string value to set an element's text, or a function.  </td>
-      <td><a href="http://api.jquery.com/text/">.text()</a></td>
+    <tr class="traversal">
+      <td>.children()</td>
+      <td>Returns the child elements of the selected element(s).  Can add a selector as an optional argument.</td>
+      <td><a href="http://api.jquery.com/children/">.children()</a></td>
+    </tr>
+    <tr class="traversal">
+      <td>.find()</td>
+      <td>Returns the descendants of each of the selected element(s). Accepts selectors, jQuery objects, or elements as arguments.</td>
+      <td><a href="http://api.jquery.com/find/">.find()</a></td>
     </tr> 
-    <tr class="inside">
-      <td>.html()</td>
-      <td>If used without an argument, .text() returns an element's HTML. It also accepts a string value to to replace an element's HTML, or a function.  </td>
-      <td><a href="http://api.jquery.com/html/">.html()</a></td>
+    <tr class="traversal">
+      <td>.next()</td>
+      <td>Returns the next sibling of each of the selected element(s). Can add a selector as an optional argument.</td>
+      <td><a href="http://api.jquery.com/next/">.next()</a></td>
+    </tr>  
+    <tr class="traversal">
+      <td>.prev()</td>
+      <td>Returns the previous sibling of each of the selected element(s). Can add a selector as an optional argument.</td>
+      <td><a href="http://api.jquery.com/prev/">.prev()</a></td>
+    </tr> 
+    <tr class="traversal">
+      <td>.parent()</td>
+      <td>Returns the parent of each of the selected element(s). Can add a selector as an optional argument.</td>
+      <td><a href="http://api.jquery.com/parent/">.parent()</a></td>
+    </tr> 
+    <tr class="filtering">
+      <td>.has()</td>
+      <td>Selects descendants of the selected element(s) that match the selector or element.</td>
+      <td><a href="http://api.jquery.com/has/">.has()</a></td>
+    </tr> 
+     <tr class="filtering">
+      <td>.is()</td>
+      <td>Returns true if the selected elements match a selector, element, or jQuery object.</td>
+      <td><a href="http://api.jquery.com/is/">.is()</a></td>
     </tr>
-    <tr class="inside">
-      <td>.append()</td>
-      <td>Inserts content as the last child of the selected element(s).  Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/append/">.append()</a></td>
-    </tr>
-    <tr class="inside">
-      <td>.prepend()</td>
-      <td>Inserts content as the first child of the selected element(s).  Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/append/">.append()</a></td>
-    </tr>
-    <tr class="outside">
-      <td>.before()</td>
-      <td>Inserts content before each selected element(s).  Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/before/">.before()</a></td>
-    </tr>
-    <tr class="outside">
-      <td>.after()</td>
-      <td>Inserts content after the selected element(s).  Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/after/">.after()</a></td>
-    </tr>
-    <tr class="around">
-      <td>wrap()</td>
-      <td>Wraps an HTML element around <em>each</em> of the selected elements. Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/wrap/">wrap();</a></td>
-    </tr>
-    <tr class="around">
-      <td>wrapAll()</td>
-      <td>Wraps an HTML element around the all of the selected elements. Accepted arguments: DOM elements, HTML strings, arrays of elements, and functions.</td>
-      <td><a href="http://api.jquery.com/wrapAll/">wrapAll();</a></td>
-    </tr>
-    <tr class="removal">
-      <td>.remove()</td>
-      <td>Removes the selected element(s) from the DOM, and any elements inside of it.</td>
-      <td><a href="http://api.jquery.com/remove/">.remove()</a></td>
-    </tr>
-    <tr class="removal">
-      <td>.unwrap()</td>
-      <td>Removes the parents of selected element(s) from the DOM, and any elements inside of it. </td>
-      <td><a href="http://api.jquery.com/unwrap/">.unwrap()</a></td>
-    </tr>
-    <tr class="replacement">
-      <td>.replaceAll()</td>
-      <td>Uses the selected element(s) to replace the target element(s).  Accepts a selector, jQuery Object, DOM elment, or array.</td>
-      <td><a href="http://api.jquery.com/replaceAll/">.replaceAll()</a></td>
-    </tr>
-    <tr class="replacement">
-      <td>.replaceWith()</td>
-      <td>Replace the selected element(s) with provided content and return the set of removed elements.</td>
-      <td><a href="http://api.jquery.com/replaceWith/">.replaceAll()</a></td>
-    </tr>
-  </table>
+    <tr class="filtering">
+      <td>.not()</td>
+      <td>Removes the selected element(s) from the set of matched elements.</td>
+      <td><a href="http://api.jquery.com/not/">.not()</a></td>
+    </tr> 
+    <tr class="filtering">
+      <td>.first()</td>
+      <td>Selects the first of the set of matched elements.</td>
+      <td><a href="http://api.jquery.com/first/">.first()</a></td>
+    </tr> 
+    <tr class="filtering">
+      <td>.last()</td>
+      <td>Selects the last of the set of matched elements.</td>
+      <td><a href="http://api.jquery.com/first/">.last()</a></td>
+    </tr> 
+    <tr class="misc">
+      <td>.contents()</td>
+      <td>Selects the children of the set of matched elements, including text and comments.</td>
+      <td><a href="http://api.jquery.com/contents/">.contents()</a></td>
+    </tr>  
+    <tr class="misc">
+      <td>.add()</td>
+      <td>Creates a new jQuery object with the set of matched elements and the selected elements.  Accepts a jQuery selector, DOM elements, or HTML snippets.</td>
+      <td><a href="http://api.jquery.com/contents/">.contents()</a></td>
+    </tr> 
+    <tr class="misc">
+      <td>.end()</td>
+      <td>Ends the most recent filtering methods and returns the selected elements to their previous state.</td>
+      <td><a href="http://api.jquery.com/end/">.end()</a></td>
+    </tr> 
+   <tr class="misc">
+      <td>.each()</td>
+      <td>Each takes a function as an argument and and iterates over the set of matching elements, invoking the function and applying it to each element in the matching set.</td>
+      <td><a href="http://api.jquery.com/each/">.each()</a></td>
+    </tr> 
   
+  </table>
 
   
  
 <script>
     $(document).ready( function () {
-     var spandiego = $(".spandiego");
-     $("ul").append(spandiego);
-     spandiego.parent().css("border", "1px solid #cc3333");
+     $(".numbers").children().not("p").css("color", "#CC0066");
 });
 </script>
 
