@@ -1,11 +1,5 @@
-$(".box").animate(
-  {
-      padding:50
-  },
-  "slow"
-  ,
-  "linear",
-  function() {
-      alert("done!");
-  }
-);
+$(".button").click( function() {
+
+  $(".box").slideToggle();
+  
+});

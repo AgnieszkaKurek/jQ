@@ -17,6 +17,9 @@ h1 {
   position: relative;
 }
 
+em {
+  color: #ff8900;
+}
 /*------------ Table styles ---------*/
 
 table {
@@ -46,10 +49,35 @@ td {
   background-color: #242424;
 }
 
+.button {
+  padding: 15px;
+  background-color: #383838;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: inherit;
+  box-shadow: 3px 3px 3px #151515;
+}
+  .button:hover {
+    background-color: #5c5b5b;
+    
+  }
 /*------------ Color Guides ---------*/
 
-.custom td:first-of-type, .custom span {
-  color: #ff8000;
+.mouse td:first-of-type, .mouse span {
+  color: #a96cc4;
 }
 
+.browser td:first-of-type, .browser span {
+  color: #83ac69;
+}
 
+.keyboard td:first-of-type, .keyboard span {
+  color: #f73ba7;
+}
+
+.document td:first-of-type, .document span {
+  color: #ea840e;
+}

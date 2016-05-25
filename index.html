@@ -7,26 +7,78 @@
    <script type=""text/javascript" src="jquery.js" ></script>
 </head>
 <body>
-<h1>Effects</h1>
-   <p>JQuery includes a set effects with standard animations like hide, fade, and slide. It also simplifies the creation of custom animation as well. </p>
-  
+<h1>Event Handling</h1>
+  <p>An <em>event</em> is triggered when a user performs an action like clicking or hovering. We can use jQuery to bind specific behavior to a particular event. </p>
+  <p>There are many different types of events, including:</p>
+  <ul>
+    <li class="mouse"><span>Mouse Events</span></li>
+    <li class="browser"><span>Browser Events</span></li>
+    <li class="document"><span>Document Loading</span></li>
+    <li class="keyboard"><span>Keyboard Events</span></li>
+    <li><span>Form Events</span></li>
+    <li><span>Event Handler Attachment</span></li>
+    <li><span>Event Object</span></li>
+  </ul>
   
   <div class="box">
   </div>
   
-  <table>
-   <caption>Effect Methods Reference</caption>
+  <button class="button" type="button">Click me!</button>
+  
+  <table class="method-reference">
+   <caption>Event Methods Reference</caption>
     <tr>
       <th>Method</th>
       <th>Description</th>
       <th>Documentation</th>
     </tr>
-    <tr class="custom">
-      <td>.animate()</td>
-      <td>Animates the specified set of CSS properties, plus any additional options arguments.  Property values should be a number in order for animate() to work.</td>
-      <td><a href="http://api.jquery.com/animate/">.animate()</a></td>
-    </tr>  
+    <tr class="mouse">
+      <td>.click()</td>
+      <td>Binds an event handler to the click JavaScript event</td>
+      <td><a href="http://api.jquery.com/click/">.click()</a></td>
+    </tr>
+    <tr class="mouse">
+      <td>.dblclick()</td>
+      <td>Binds an event handler to the double click JavaScript event</td>
+      <td><a href="http://api.jquery.com/dblclick/">.dblclick()</a></td>
+    </tr>
+    <tr class="mouse">
+      <td>.hover()</td>
+      <td>Binds an event handler to the hover JavaScript event</td>
+      <td><a href="http://api.jquery.com/hover/">.hover()</a></td>
+    </tr>
+    <tr class="document">
+      <td>.ready()</td>
+      <td>Binds an event handler to the ready JavaScript event</td>
+      <td><a href="http://api.jquery.com/ready/">.ready()</a></td>
+    </tr>
+    <tr class="browser">
+      <td>.resize()</td>
+      <td>Binds an event handler to the resize JavaScript event</td>
+      <td><a href="http://api.jquery.com/resize/">.resize()</a></td>
+    </tr>
+    <tr class="browser">
+      <td>.scroll()</td>
+      <td>Binds an event handler to the scroll JavaScript event</td>
+      <td><a href="http://api.jquery.com/scroll/">.scroll()</a></td>
+    </tr>
+    <tr class="keyboard">
+      <td>.keydown()</td>
+      <td>Binds an event handler to the keydown JavaScript event</td>
+      <td><a href="http://api.jquery.com/keydown/">.keydown()</a></td>
+    </tr>
+    <tr class="keyboard">
+      <td>.keyup()</td>
+      <td>Binds an event handler to the keyup JavaScript event</td>
+      <td><a href="http://api.jquery.com/keyup/">.keyup()</a></td>
+    </tr>
+    <tr class="keyboard">
+      <td>.keypress()</td>
+      <td>Binds an event handler to the keypress JavaScript event</td>
+      <td><a href="http://api.jquery.com/keypress/">.keypress()</a></td>
+    </tr>
   </table>
+
   
 
 
@@ -35,17 +87,12 @@
  
 <script>
 $(document).ready( function() {
- $(".box").animate(
-  {
-      padding:50
-  },
-  "slow"
-  ,
-  "linear",
-  function() {
-      alert("done!");
-  }
-);
+$(".button").click( function() {
+
+  $(".box").slideToggle();
+  
+});
+
   
   
 });
