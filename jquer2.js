@@ -1,4 +1,4 @@
-$(".button").click( function() {
+$(".window").resize( function() {
 
   $(".box").slideToggle();
   
